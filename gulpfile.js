@@ -19,26 +19,26 @@ gulp.task('img', () =>
         .pipe(gulp.dest('dist/img'))
 );
 
-gulp.task('cards', () =>
-    gulp.src('app/img/cards/*')
-        .pipe(imagemin())
-        .pipe(gulp.dest('dist/img/cards/'))
-);
+// gulp.task('cards', () =>
+//     gulp.src('app/img/cards/*')
+//         .pipe(imagemin())
+//         .pipe(gulp.dest('dist/img/cards/'))
+// );
+//
+// gulp.task('oracle', () =>
+//     gulp.src('app/img/oracle/*')
+//         .pipe(imagemin())
+//         .pipe(gulp.dest('dist/img/oracle/'))
+// );
+//
+// gulp.task('story', () =>
+//     gulp.src('app/img/story/*')
+//         .pipe(imagemin())
+//         .pipe(gulp.dest('dist/img/story/'))
+// );
 
-gulp.task('oracle', () =>
-    gulp.src('app/img/oracle/*')
-        .pipe(imagemin())
-        .pipe(gulp.dest('dist/img/oracle/'))
-);
 
-gulp.task('story', () =>
-    gulp.src('app/img/story/*')
-        .pipe(imagemin())
-        .pipe(gulp.dest('dist/img/story/'))
-);
-
-
-gulp.task('image', gulp.parallel('img', 'cards', 'oracle', 'story'));
+// gulp.task('image', gulp.parallel('img', 'cards', 'oracle', 'story'));
 
 
 //----------------------gulp build------------------------//
