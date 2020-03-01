@@ -1,0 +1,297 @@
+@import "node_modules/normalize.css/normalize";
+
+/* montserrat-regular - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'),
+  url('fonts/montserrat-v14-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url('fonts/montserrat-v14-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* montserrat-500 - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Montserrat Medium'), local('Montserrat-Medium'),
+  url('fonts/montserrat-v14-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url('fonts/montserrat-v14-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* montserrat-600 - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'),
+  url('fonts/montserrat-v14-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url('fonts/montserrat-v14-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* montserrat-700 - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Montserrat Bold'), local('Montserrat-Bold'),
+  url('fonts/montserrat-v14-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url('fonts/montserrat-v14-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* teko-600 - latin */
+@font-face {
+  font-family: 'Teko';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Teko SemiBold'), local('Teko-SemiBold'),
+  url('fonts/teko-v9-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url('fonts/teko-v9-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* teko-700 - latin */
+@font-face {
+  font-family: 'Teko';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Teko Bold'), local('Teko-Bold'),
+  url('fonts/teko-v9-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url('fonts/teko-v9-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+body {
+  font-family: 'Montserrat', serif;
+  box-sizing: border-box;
+  position: relative;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.up-scroll__button {
+  width: 47px;
+  height: 47px;
+  position: absolute;
+  bottom: 126px;
+  right: 100px;
+  background: #004cff;
+  border-radius: 15px;
+  padding: 13.5px 14.5px;
+  z-index: 10;
+}
+
+.up-scroll__button:hover,
+.up-scroll__button:focus,
+.up-scroll__button:active {
+  background: darken(#004cff, 10%);
+}
+
+.up-scroll__button-pic {
+  width: 100%;
+}
+
+
+.wrapper {
+  max-width: 1060px;
+  margin: 0 auto;
+}
+//--------------pre-header styles start-------------
+.pre-header {
+  height: 78px;
+  width: 100%;
+  background: #262626;
+}
+
+.top-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-panel__promo p {
+  color: #f8f8f8;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 32px 0;
+  margin: 0;
+}
+
+.top-panel__icons {
+  display: flex;
+}
+
+.top-panel-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 23px;
+  width: 31px;
+  height: 31px;
+  padding: 2px 0;
+}
+
+.top-panel-link:nth-child(2) {
+  padding: 4px 0;
+}
+
+.top-panel__icon {
+  max-width: 100%;
+}
+
+//-----------------header styles start------------------
+
+.header {
+  position: relative;
+  padding-top: 37px;
+  height: 760px;
+}
+
+.header::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  background: #b2b2b2 url("img/header-bg1.jpg") no-repeat center/cover;
+  z-index: -1;
+  transition: 1s all linear;
+}
+
+.header::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background: #b2b2b2 url("img/header-bg2.jpg") no-repeat center/cover;
+  z-index: -1;
+  transition: 1s all linear;
+}
+
+.header.active::after {
+  opacity: 0;
+}
+.header.active::before {
+  opacity: 1;
+}
+
+.header-bg__switch {
+  position: absolute;
+  top: 50%;
+  right: 113px;
+  transform: translateY(-50%);
+}
+
+.header-bg__switch-button {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 5px solid #404040;
+  margin-bottom: 22px;
+}
+
+.header-bg__switch-button.active {
+  border: 5px solid #004cff;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Teko', serif;
+  font-weight: 400;
+  font-size: 23px;
+  letter-spacing: 0.45px;
+  margin-bottom: 164px;
+  color: #404040;
+}
+
+.header__logo {
+  display: block;
+  width: 158px;
+  height: 83px;
+}
+
+.header__logo-pic {
+   width: 100%;
+ }
+
+.header__nav-items {
+   display: flex;
+   justify-content: space-between;
+   list-style: none;
+ }
+
+.header__nav-item {
+  position: relative;
+}
+
+.header__nav-item:not(:last-child) {
+  margin-right: 52px;
+}
+
+.header__nav-link {
+  transition: .2s;
+}
+
+.header__nav-link:hover,
+.header__nav-link:focus,
+.header__nav-link:active {
+  color: #004cff;
+}
+
+.decor-header__link {
+  position: absolute;
+  bottom: 40%;
+  left: calc(100% + 20px);
+  width: 7px;
+  height: 7px;
+  background-color: #004cff;
+  transform: rotateZ(45deg);
+}
+
+.header__nav-button {
+  color: #ffffff;
+  padding: 24px 38px 27px;
+  background-color: #004cff;
+  transition: .2s;
+}
+
+.header__nav-button:hover,
+.header__nav-button:active,
+.header__nav-button:focus {
+  background: darken(#004cff, 10%);
+}
+
+.intro__title {
+  color: #ffffff;
+  font-family: Teko, serif;
+  font-size: 68px;
+  font-weight: 700;
+  line-height: 72px;
+  letter-spacing: 2.73px;
+  margin-bottom: 64px;
+}
+
+.header__intro-button {
+  color: white;
+  font-size: 18px;
+  padding: 20px 42px;
+  border: 6px solid #ffffff;
+  max-width: 248px;
+}
+
