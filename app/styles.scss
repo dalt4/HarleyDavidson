@@ -60,6 +60,7 @@ body {
   font-family: 'Montserrat', serif;
   box-sizing: border-box;
   position: relative;
+  background: #232323;
 }
 
 * {
@@ -68,6 +69,7 @@ body {
 
 ul {
   list-style: none;
+  padding: 0;
 }
 
 a {
@@ -76,10 +78,28 @@ a {
   display: block;
 }
 
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+input,
+input:hover,
+input:focus,
+input:active {
+  border: none;
+  outline: none;
+}
+
+
+
+
 .up-scroll__button {
   width: 47px;
   height: 47px;
-  position: absolute;
+  position: fixed;
   bottom: 126px;
   right: 100px;
   background: #004cff;
@@ -103,6 +123,12 @@ a {
   max-width: 1060px;
   margin: 0 auto;
 }
+
+.wrapper_big{
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
 //--------------pre-header styles start-------------
 .pre-header {
   height: 78px;
@@ -151,7 +177,8 @@ a {
 .header {
   position: relative;
   padding-top: 37px;
-  height: 760px;
+  height: calc(100vh - 78px);
+  margin-bottom: 44px;
 }
 
 .header::after {
@@ -227,14 +254,14 @@ a {
 }
 
 .header__logo-pic {
-   width: 100%;
- }
+  width: 100%;
+}
 
 .header__nav-items {
-   display: flex;
-   justify-content: space-between;
-   list-style: none;
- }
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
 
 .header__nav-item {
   position: relative;
@@ -295,3 +322,556 @@ a {
   max-width: 248px;
 }
 
+//--------------------------rally-fuel styles start-------------------//
+
+.rally-fuel__content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 122px;
+  font-family: 'Teko', serif;
+  color: white;
+}
+
+.rally-fuel__item {
+  height: 402px;
+  margin-bottom: 40px;
+}
+
+.rally-fuel__item:first-child {
+  background: #004cff url("img/fuel-pic1.jpg") no-repeat center/cover;
+  position: relative;
+  padding: 99px 68px 73px 146px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.rally-fuel__title {
+  font-size: 68px;
+  line-height: 61.5px;
+  font-weight: 400;
+  letter-spacing: 2.73px;
+  padding-right: 10px;
+}
+
+.rally-fuel__discount {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-self: flex-end;
+  }
+
+.rally-fuel__discount p:first-child {
+  font-size: 43px;
+  margin-bottom: 29px;
+}
+
+.rally-fuel__discount p:last-child {
+  font-size: 78px;
+  font-weight: 700;
+  line-height: 70.5px;
+}
+
+.rally-fuel__item:nth-child(odd) {
+  margin-right: 40px;
+}
+
+.rally-fuel__item:first-child,
+.rally-fuel__item:last-child {
+  width: calc(66.5% - 20px);
+}
+
+.rally-fuel__item:nth-child(2),
+.rally-fuel__item:nth-child(3) {
+  width: calc(33.2% - 20px);
+}
+
+.rally-fuel__item-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+//---------------------product styles start-------------------//
+
+.product {
+  margin-bottom: 131px;
+}
+
+.product__title {
+  text-align: center;
+  color: #f1f1f1;
+  font-family: 'Teko', serif;
+  font-size: 53px;
+  font-weight: 700;
+  margin-bottom: 59px;
+}
+
+.product__nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.product__nav-item:not(:last-child) {
+  margin-right: 45px;
+}
+
+.product__nav-link {
+  font-size: 21px;
+  font-weight: 400;
+  color: white;
+}
+
+.product__nav-link:hover,
+.product__nav-link:active,
+.product__nav-link:focus {
+  color: #004cff;
+}
+
+.product__line {
+  height: 2px;
+  background: #b2b2b2;
+  margin-bottom: 75px;
+}
+
+.product__cards {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.product__card {
+  height: 508px;
+  flex-grow: 1;
+  background: white;
+}
+
+.product__card:not(:last-child) {
+  margin-right: 44px;
+}
+
+.product__card-pic {
+  width: 100%;
+  margin-bottom: 36px;
+}
+
+.product__card-title {
+  text-align: center;
+  font-size: 21px;
+  font-weight: 600;
+  color: #262626;
+  margin-bottom: 27px;
+}
+
+.product__card-price {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  color: #004cff;
+}
+
+//--------------------<another-discount styles start-------------------//
+
+.another-discount__up50 {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 44px;
+}
+
+.another-discount__up50-item {
+  height: 486px;
+  flex-grow: 2;
+  position: relative;
+}
+
+.another-discount__up50-item:first-child {
+  flex-grow: 1;
+  margin-right: 44px;
+}
+
+.another-discount__up50-item-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.another-discount__offer {
+  position: absolute;
+  top: 0;
+  left: 55%;
+  color: #262626;
+  font-family: 'Teko', serif;
+  padding-top: 81px;
+}
+
+.another-discount__offer p:first-child {
+  font-size: 52px;
+  font-weight: 400;
+  margin-bottom: 36px;
+}
+.another-discount__offer p:last-child {
+  font-size: 95px;
+  font-weight: 700;
+  line-height: 85.5px;
+}
+
+.another-discount__up75 {
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 178px;
+  background: url("img/up75-bg.jpg") no-repeat center/cover;
+  margin-bottom: 104px;
+}
+
+.another-discount__up75-title {
+  color: #ffffff;
+  font-family: 'Teko', serif;
+  font-size: 97px;
+  font-weight: 700;
+  margin-bottom: 101px;
+}
+
+.another-discount__form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.another-discount__form input[type="text"]{
+  width: 50vw;
+  max-width: 700px;
+  height: 62px;
+  padding-left: 44px;
+}
+
+.another-discount__form input[type="text"]::placeholder {
+  color: #707070;
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.another-discount__form input[type="submit"]{
+  width: 180px;
+  height: 62px;
+  padding: 24px 52px;
+  background: #004cff;
+  color: #ffffff;
+  font-size: 19px;
+  font-weight: 400;
+}
+
+//---------------------------------guarantee styles start--------------------------//
+
+.guarantee__cards {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 104px;
+  align-items: stretch;
+}
+
+.guarantee__card {
+  min-height: 165px;
+  flex-grow: 1;
+  background: white;
+  display: flex;
+  padding: 35px;
+}
+
+.guarantee__card:nth-child(2) {
+  margin: 0 22px;
+}
+
+.guarantee__card-picbox {
+  margin-right: 35px;
+  display: flex;
+}
+
+.guarantee__card-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.guarantee__card-title {
+  color: #262626;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.guarantee__card-desc p {
+  color: #707070;
+  font-size: 11px;
+  font-weight: 400
+}
+
+//--------------------gallery styles start-------------------//
+
+.gallery__items {
+  display: flex;
+}
+
+.gallery___item {
+  min-height: 480px;
+  flex-grow: 1;
+}
+
+.gallery-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+//--------------------footer styles start-------------------//
+
+
+.footer {
+  padding-top: 126px;
+}
+
+.footer__content {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 66px;
+}
+
+.footer__content-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer__content-item:first-child,
+.footer__content-item:last-child {
+  width: 250px;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer__content-item-title {
+  margin-bottom: 40px;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.about-desc {
+  font-size: 19px;
+  font-weight: 400;
+  margin-bottom: 68px;
+  line-height: 33.75px;
+}
+
+.footer__social-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.footer__social-link {
+  max-height: 50px;
+  max-width: 50px;
+}
+
+.footer__social-link-pic {
+  width: 100%;
+}
+
+.footer__nav-items {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.footer__nav-item {
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 42.75px;
+}
+
+.footer__logo {
+  margin-bottom: 47px;
+}
+
+.footer__address-desc {
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 33.75px;
+  margin-bottom: 30px;
+}
+
+.footer__payments-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.footer__line {
+  width: 1300px;
+  height: 1px;
+  border: 1px solid #b2b2b2;
+  position: relative;
+  left: -120px;
+  margin-bottom: 50px;
+}
+
+.footer__underline {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 63px;
+  color: #b2b2b2;
+  font-size: 19px;
+}
+
+.footer__underline-link {
+  margin-right: 40px;
+}
+
+.footer__underline-copyright {
+  margin-left: auto;
+  margin-right: 70px;
+}
+
+//--------------media queries---------------------//
+// -----------------------------------1060--------------------------------//
+
+@media screen and (max-width: 1060px) {
+  .wrapper,
+  .wrapper_big {
+    padding: 0 15px;
+  }
+
+  .rally-fuel__title {
+    font-size: 55px;
+  }
+
+  .rally-fuel__discount p:first-child {
+    font-size: 35px;
+  }
+
+  .rally-fuel__discount p:last-child {
+    font-size: 65px;
+  }
+
+  .rally-fuel__item:first-child {
+    padding: 99px 68px 73px 70px;
+  }
+
+  .gallery___item {
+    min-height: 400px;
+  }
+
+}
+// ----------------------------900-------------------------------------//
+
+@media screen and (max-width: 900px) {
+  .header__nav {
+    font-size: 20px;
+  }
+
+  .header__nav-item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  .header__nav-button {
+    padding: 15px 28px ;
+  }
+
+  .rally-fuel__title {
+    font-size: 44px;
+  }
+
+  .rally-fuel__discount p:first-child {
+    font-size: 32px;
+  }
+
+  .rally-fuel__discount p:last-child {
+    font-size: 52px;
+  }
+
+  .rally-fuel__item:first-child {
+    padding: 30px 40px 30px 30px;
+  }
+
+  .rally-fuel__item {
+    height: 300px;
+  }
+
+  .rally-fuel__content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
+
+    .up-scroll__button {
+    bottom: 60px;
+    right: 50px;
+  }
+
+  .product__card {
+    height: 450px;
+  }
+
+  .product__card:not(:last-child) {
+    margin-right: 24px;
+  }
+
+  .another-discount__up75 {
+    height: 495px;
+    padding-top: 100px;
+    margin-bottom: 50px;
+  }
+
+  .another-discount__up50-item {
+    height: 450px;
+  }
+
+  .guarantee__cards {
+    flex-direction: column;
+    margin: 0 auto 50px;
+    width: 50vw;
+  }
+
+  .guarantee__card:nth-child(2) {
+    margin: 15px 0;
+  }
+
+  .gallery___item {
+    min-height: 300px;
+  }
+
+  .footer__logo {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .footer__logo-pic {
+    max-width: 100%;
+  }
+
+  .about-desc {
+    font-size: 19px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    line-height: 33.75px;
+  }
+
+  .footer__content-item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  .footer__content-item:first-child,
+  .footer__content-item:last-child {
+    width: 200px;
+  }
+}
