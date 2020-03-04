@@ -73,3 +73,24 @@
     };
     scrollTo();
 })();
+
+//----------- burger-menu---------------------//
+(function () {
+    var header__burger = document.querySelector('.header__burger');
+    var header_nav_items = document.querySelector('.header__nav-items');
+    var header__nav_links = document.querySelectorAll('.header__nav-link');
+
+    header__burger.addEventListener('click', function () {
+        header__burger.classList.toggle('active');
+        header_nav_items.classList.toggle('active');
+    });
+
+    if (window.innerWidth <= 767) {
+        header__nav_links.forEach(function (item) {
+            item.addEventListener('click', function () {
+                header__burger.classList.remove('active');
+                header_nav_items.classList.remove('active');
+            });
+        });
+    }
+})();

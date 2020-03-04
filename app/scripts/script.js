@@ -69,3 +69,24 @@
     };
     scrollTo();
 })();
+
+//----------- burger-menu---------------------//
+(() => {
+    const header__burger = document.querySelector('.header__burger');
+    const header_nav_items = document.querySelector('.header__nav-items');
+    const header__nav_links = document.querySelectorAll('.header__nav-link');
+
+    header__burger.addEventListener('click', () => {
+        header__burger.classList.toggle('active');
+        header_nav_items.classList.toggle('active')
+    });
+
+    if (window.innerWidth <= 767) {
+        header__nav_links.forEach(item => {
+            item.addEventListener('click', () => {
+                header__burger.classList.remove('active');
+                header_nav_items.classList.remove('active')
+            })
+        })
+    }
+})();
