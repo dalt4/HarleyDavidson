@@ -61,6 +61,12 @@ gulp.task('uglify', () =>
         .pipe(gulp.dest('dist'))
 );
 
+gulp.task('fonts', () =>
+    gulp.src('app/fonts/*')
+        .pipe(gulp.dest('dist/fonts'))
+);
+
+
 gulp.task('build', gulp.parallel('html', 'css', 'uglify'));
 
 //--------------------gulp default------------------------//
